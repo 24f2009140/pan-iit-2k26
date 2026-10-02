@@ -280,6 +280,43 @@ tr:hover td { background: var(--accent-lt); }
 .tl-highlight { border-left: 3px solid var(--accent); }
 .tl-highlight .tl-time { color: var(--accent); font-weight: 700; }
 
+/* ---------- Parallel Timeline Groups ---------- */
+.tl-parallel-group {
+  border: 1px solid var(--border);
+  border-left: 4px solid #e5a000;
+  border-radius: var(--radius);
+  margin: 10px 0;
+  overflow: hidden;
+}
+.tl-parallel-label {
+  background: #fdf3dc;
+  color: #7a5000;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 5px 10px;
+  border-bottom: 1px solid #f0dba0;
+}
+.tl-parallel-events {
+  display: flex;
+  flex-direction: column;
+}
+.tl-parallel-event {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0 10px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  align-items: start;
+  background: var(--bg);
+}
+.tl-parallel-event:last-child { border-bottom: none; }
+.tl-parallel-event:nth-child(even) { background: var(--surface); }
+.tl-parallel-event.tl-highlight { border-left: 3px solid var(--accent); }
+.tl-parallel-event.tl-highlight .tl-time { color: var(--accent); font-weight: 700; }
+
 /* ---------- Locations ---------- */
 .location-item {
   border: 1px solid var(--border);
@@ -484,6 +521,11 @@ tr:hover td { background: var(--accent-lt); }
   font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
+}
+.badge-warn {
+  background: #fff3e0;
+  color: #b85c00;
+  border-color: #f0c070;
 }
 
 /* ---------- Dignitary card (search results) ---------- */
